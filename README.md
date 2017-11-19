@@ -1,8 +1,42 @@
 # I DIDN'T WRITE THE CODE
-It's downloaded from https://pypi.python.org/pypi/agfusion
-I only modified a little bit in order to generate editable PDF figures. For the original repo, please check https://github.com/murphycj/AGFusion
+It's downloaded from https://pypi.python.org/pypi/agfusion. I only modified a little bit in order to generate editable PDF figures. For the original repo, please check https://github.com/murphycj/AGFusion
 
+Before you run agfusion on Mac, please make sure you've followed the following steps (based on https://stackoverflow.com/a/35687613/862853) to get required font:
 
+1. Install fondu:
+
+    ```
+    brew install fondu
+    ```
+
+2. Find out matplotlib location:
+
+    ```
+    python -c "import matplotlib ; print(matplotlib.matplotlib_fname())"
+    ```
+    
+    For me it's /Users/wenweiliao/miniconda3/envs/agfusion_test/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+
+3. Make a copy of Helvetica:
+
+    ```
+    mkdir ~/Desktop/font_copies
+    cp /System/Library/Fonts/Helvetica.dfont ~/Desktop/font_copies
+    ```
+
+4. Convert the Helvetica copy we've made from dfont to ttf:
+
+    ```
+    cd /Users/wenweiliao/miniconda3/envs/agfusion_test/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
+    fondu -show ~/Desktop/font_copies/Helvetica.dfont
+    ```
+
+5. Remove font cache:
+
+    ```
+    rm -rf ~/.matplotlib/*
+    ```
+    
 # Annotate Gene Fusion (AGFusion)
 AGFusion is a python package for annotating gene fusions from the human or mouse genomes. AGFusion simply needs the reference genome, the two gene partners, and the fusion junction coordinates as input, and outputs the following:
 
