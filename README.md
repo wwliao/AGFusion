@@ -15,7 +15,7 @@ Before you run agfusion on Mac, please make sure you've followed the following s
     python -c "import matplotlib ; print(matplotlib.matplotlib_fname())"
     ```
     
-    For me it's /Users/wenweiliao/miniconda3/envs/agfusion_test/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+    For me it's /Users/wenweiliao/miniconda3/envs/agfusion/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
 
 3. Make a copy of Helvetica:
 
@@ -27,7 +27,7 @@ Before you run agfusion on Mac, please make sure you've followed the following s
 4. Convert the Helvetica copy we've made from dfont to ttf:
 
     ```
-    cd /Users/wenweiliao/miniconda3/envs/agfusion_test/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
+    cd /Users/wenweiliao/miniconda3/envs/agfusion/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
     fondu -show ~/Desktop/font_copies/Helvetica.dfont
     ```
 
