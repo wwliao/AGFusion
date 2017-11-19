@@ -1,3 +1,8 @@
+# I DIDN'T WRITE THE CODE
+It's downloaded from https://pypi.python.org/pypi/agfusion
+I only modified a little bit in order to generate editable PDF figures. For the original repo, please check https://github.com/murphycj/AGFusion
+
+
 # Annotate Gene Fusion (AGFusion)
 AGFusion is a python package for annotating gene fusions from the human or mouse genomes. AGFusion simply needs the reference genome, the two gene partners, and the fusion junction coordinates as input, and outputs the following:
 
